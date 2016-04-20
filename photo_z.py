@@ -262,7 +262,7 @@ if __name__ == '__main__':
 
 	for cat in patches:
 		print '...analyzing catalouge ', cat,'...'
-		data = np.genfromtxt(path_cats+catalogues[cat], skiprows=3, dtype=None, usecols=(0,1,2,3,4,5,8,9,10,13,14), names=names_cats)
+		data = np.genfromtxt(path_cats+catalogues[cat], skip_header=3, dtype=None, usecols=(0,1,2,3,4,5,8,9,10,13,14), names=names_cats)
 
 		# Create workers processes and run parallel analysis 
 		pool   = Pool(processes=2)
